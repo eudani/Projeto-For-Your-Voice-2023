@@ -1,0 +1,245 @@
+body {
+    font-family: 'Nunito', sans-serif;
+    background: url(upper\ corner.png) no-repeat top right, url(bottom\ corner.png) no-repeat bottom left;
+}
+
+@font-face {
+    font-family: "Kenao";
+    src:
+        local("Kenao"),
+        url("Kenao.otf");
+}
+
+header {
+    margin-top: 0%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin: 10px;
+}
+
+#icon {
+    height: 5.25em;
+}
+
+.estrelinha {
+    height: 2.5em;
+    margin-top: 1.25rem;
+}
+
+header a {
+    text-transform: uppercase;
+    text-decoration: none;
+    font-weight: bold;
+    margin: 0.938em;
+    font-size: 20pt;
+    margin-top: 1.2em;
+    background: radial-gradient(50% 50% at 50% 50%, #D6006F 0%, #724E94 53.13%, #0038A7 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+#Login_Index {
+    text-transform: capitalize;
+    border: 2px solid black;
+    background-color: white;
+    color: black;
+    padding: 20px 32px;
+    font-size: 20px;
+    border-radius: 30px;
+    cursor: pointer;
+    margin-bottom: 25%;
+    margin-top: 10%;
+    text-align: center;
+    float: right;
+    border-color: #724E94;
+    color: #0038A7;
+    margin-left: 10px;
+}
+
+#Login_Index:hover {
+    background: #D6006F;
+    background: radial-gradient(circle, #D6006F 0%, #724E94 53.13%, #0038A7 100%);
+    color: white;
+
+}
+
+#body {
+    display: flex;
+    align-items: center;
+}
+
+#sobre {
+    width: 50%;
+    margin-bottom: 4.688em;
+    margin-top: 10em;
+}
+
+#nosso-projeto {
+    width: 20rem;
+}
+
+
+.image-slideshow {
+    max-width: 1000px;
+    position: relative;
+    margin: auto;
+}
+
+#sobre-slide img {
+    margin-bottom: 3.8em;
+}
+
+.fade {
+    animation-name: fade;
+    animation-duration: 0.5s;
+}
+
+@keyframes fade {
+    from {
+        opacity: .8
+    }
+
+    to {
+        opacity: 1
+    }
+}
+
+.slider {
+    width: 60em;
+}
+
+.slider-wrapper {
+    width: 100%;
+    /* height: 50%; */
+    position: relative;
+    margin-top: -350px;
+    margin-left: 5em;
+}
+
+.slide {
+    float: left;
+    position: absolute;
+    /* width: 100%;
+    height: 100%; */
+    opacity: 0;
+    transition: 3s;
+}
+
+.slider-wrapper>.slide:first-child {
+    opacity: 1;
+}
+
+#main-slider {
+    margin-right: 50px;
+}
+
+/* #marketplace {
+    margin-top: 135px;
+} */
+
+#marketplace a:hover {
+    background: rgb(112,54,157);
+    background: radial-gradient(circle, rgba(112,54,157,1) 0%, rgba(75,54,157,1) 16%, rgba(72,125,231,1) 31%, rgba(121,195,20,1) 41%, rgba(250,235,54,1) 59%, rgba(255,165,0,1) 80%, rgba(232,20,22,1) 90%); 
+background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 15.5pt;
+}
+
+#marketplace a {
+    border: 1px solid black;
+    padding-left: 5em;
+    padding-right: 5em;
+    padding-top: 0.938em;
+    padding-bottom: 0.938em;
+    border-radius: 1.875em;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    font-size: 15pt;
+}
+
+
+#main-slider img {
+    height: 43.75em;
+    border-radius: 1.25em;
+}
+
+#bandeirinha {
+    height: 3.125em;
+    margin-top: 1.563em;
+}
+
+footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    text-align: center;
+    bottom: 0;
+    width: 100%;
+    margin-bottom: 0.625em;
+    margin-top: 8em;
+    /* position: absolute; */
+}
+
+footer a {
+    text-transform: uppercase;
+    text-decoration: none;
+    background: linear-gradient(180deg, #E40303 0%, #FF8C00 22.4%, #FFED00 39.06%, #007F26 57.81%, #004DFF 79.17%, #750787 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: bold;
+    margin: 0.938em;
+    font-size: 20pt;
+}
+
+#background {
+    margin: 0%;
+}
+
+.footer {
+    font-size: 10pt;
+    margin: 0%;
+    margin: 0.938em;
+}
+
+
+@media (max-width:1920px) {
+    body {
+        width: 1920px;
+        height: 1080px;
+    }
+
+    #sobre-slide img {
+        width: 550px;
+    }
+}
+
+#prevBtn,
+#nextBtn {
+    cursor: pointer;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border: 1px solid black;
+    user-select: none;
+    background: none;
+    border-radius: 1.875em;
+}
+
+#prevBtn {
+    left: 0;
+}
+
+#nextBtn {
+    right: 0;
+}
+

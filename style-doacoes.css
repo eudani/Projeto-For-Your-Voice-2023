@@ -1,0 +1,266 @@
+body,
+html {
+    font-family: 'Nunito', sans-serif;
+    margin: 0px;
+    padding: 0px;
+    min-height: 100%;
+    height: 100%;
+    background: url(background-doacoes.svg) no-repeat;
+    background-position: bottom -380px left;
+}
+
+@font-face {
+    font-family: "Kenao";
+    src:
+        local("Kenao"),
+        url("Kenao.otf");
+}
+
+header {
+    margin-top: 0%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin: 10px;
+}
+
+#icon {
+    height: 100px;
+}
+
+.estrelinha {
+    height: 40px;
+    margin-top: 20px;
+}
+
+header a {
+    text-transform: uppercase;
+    text-decoration: none;
+    font-weight: bold;
+    margin: 15px;
+    font-size: 20pt;
+    margin-top: 27px;
+    background: conic-gradient(from 185deg at 50% 29.75%, #078E70 20.625000447034836deg, #27CEAA 191.25deg, #3D1A78 360deg);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+
+.Login {
+    text-transform: capitalize;
+    border: 2px solid black;
+    background-color: white;
+    color: black;
+    padding: 20px 30px;
+    font-size: 20px;
+    border-radius: 30px;
+    cursor: pointer;
+    margin-bottom: 25%;
+    margin-top: 10%;
+    text-align: center;
+    float: right;
+    border-color: rgb(40, 205, 169);
+    color: rgb(61, 26, 120);
+    margin-left: 10px;
+     
+  }
+  
+  .Login:hover {
+    background: rgb(61, 26, 120);
+    background: radial-gradient(circle, rgb(78, 74, 203) 0%, rgb(40, 205, 169) 100%);
+    color: white;  
+}
+
+#icon {
+    height: 5.25em;
+}
+
+.estrelinha {
+    height: 40px;
+    margin-top: 20px;
+}
+
+#bandeirinha {
+    height: 50px;
+    margin-top: 25px;
+}
+
+h1 {
+    font-family: 'Kenao';
+    font-size: 85px;
+    background: linear-gradient(180deg, rgb(61, 26, 120) 0%, rgb(78, 74, 203) 21.88%, rgb(126, 175, 230) 42.19%, rgb(156, 233, 198) 59.9%, rgb(40, 205, 169) 76.56%,rgb(7, 142, 113)) 91.15%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+#wrapper {
+    min-height: 100%;
+    /* height: auto !important; */
+    margin-bottom: -50px;
+}
+
+#wrapper:after {
+    content: "";
+    display: block;
+    height: 50px;
+}
+
+form {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.form-section {
+    background: linear-gradient(180deg, rgba(61, 26, 120, 0.30) 0%, rgba(79, 74, 203, 0.30) 21.88%, rgba(126, 175, 230, 0.30) 42.19%, rgba(156, 233, 198, 0.30) 59.9%, rgba(40, 205, 170, 0.30) 76.56%, rgba(7, 142, 112, 0.30) 91.15%);
+    background-size: auto;
+    height: 600px;
+    width: 550px;
+    border-radius: 30px;
+    margin-top: 100px;
+}
+
+.form-section h2 {
+    margin-bottom: 20px;
+    text-align: center;
+    font-family: "Kenao";
+    font-size: 2.75em;
+}
+
+.form-section input {
+    padding: 13px 0px 13px 25px;
+    text-align: center;
+    border: 2px solid #dddddd;
+    border-radius: 5px;
+    letter-spacing: 1px;
+    word-spacing: 3px;
+    outline: none;
+    font-size: 16px;
+    color: #555555;
+    font-family: 'nunito', sans-serif;
+}
+
+.form-section label {
+    font-size: 30px;
+}
+
+.button {
+    margin-top: 40px;
+    background: #faf8f8;
+    padding: 30px;
+    text-align: center;
+    color: black;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    border: 2px solid #dddddd;
+    border-radius: 5px;
+    letter-spacing: 1px;
+    word-spacing: 3px;
+    outline: none;
+    width: 40%;
+    font-size: 20px;
+    color: #555555e3;
+}
+
+#doacoes1 {
+    margin-left: 200px;
+}
+
+#doacoes1 input {
+    width: 40%;
+    padding: 30px;
+    font-size: 20px;
+}
+
+#trintareais, #cemreais {
+    margin-left: 65px;
+}
+
+#doacoes2 {
+    margin-right: 200px;
+}
+
+#doacoes2 input {
+    width: 85%;
+    padding: 30px;
+}
+
+/* .custom-amount {
+    margin-bottom: 20px;
+} */
+
+#customAmount {
+    margin-top: 50px;
+    background: #faf8f8;
+    padding: 20px 7px;
+    text-align: center;
+    color: black;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    border: 2px solid #dddddd;
+    border-radius: 5px;
+    letter-spacing: 1px;
+    word-spacing: 3px;
+    outline: none;
+}
+
+#proximo-doacoes {
+    background: #9AE9C4;
+    padding: 20px 70px;
+    color: black;
+    border-radius: 5px;
+    text-align: center;
+    border: 2px solid #dddddd;
+    border-radius: 7px;
+    letter-spacing: 1px;
+    word-spacing: 3px;
+    outline: none;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: -250px;
+}
+
+footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    text-align: center;
+    width: 100%;
+    margin-bottom: 10px;
+    margin-top: 20px;
+}
+
+footer a {
+    text-transform: uppercase;
+    text-decoration: none;
+    font-weight: bold;
+    margin: 15px;
+    font-size: 20pt;
+    background: conic-gradient(from 185deg at 50% 29.75%, #078E70 20.625000447034836deg, #27CEAA 191.25deg, #3D1A78 360deg);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.footer {
+    font-size: 10pt;
+    margin: 0%;
+    margin: 15px;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+    -moz-appearance: textfield;
+}
