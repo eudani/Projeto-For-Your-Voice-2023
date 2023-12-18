@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luana Pacheco - For Your Voice</title>
+    <link rel="stylesheet" href="artistas/luana/luana.css">
+</head>
+
+<body>
+    <header>
+        <img src="artistas/luana/fyv.svg" alt="icon" id="icon">
+        <a href="index.html">página inicial</a>
+        <img src="artistas/luana/estrelinha.svg" alt="estrelinha" class="estrelinha">
+        <a href="linhasdeajuda.html">linhas de ajuda</a>
+        <img src="artistas/luana/estrelinha.svg" alt="estrelinha" class="estrelinha">
+        <a href="doacoes.html">doações</a>
+        <img src="artistas/luana/estrelinha.svg" alt="estrelinha" class="estrelinha">
+        <a href="contatos.html">contatos</a>
+        <form action="login.html" method="post">
+            <input type="submit" id="Login_Index" name="Login_Index" value="Login" class="Login_Index">
+        </form>
+    </header>
+    <main>
+        <div id="texto">
+            <center><img src="artistas/luana/luanapacheco.svg" alt="Luana Pacheco"></center>
+            <p>Luana Pacheco tem 20 anos e é natural de <u>Santa Maria DF.</u><br>
+                Apaixonada pela dança busca formas de agregar na sua arte indo a eventos culturais e inclusive faz liceciatura em dança. A história da Luana começa no ensino médio apresentando trabalhos escolares e sarais que são apresentações de todo tipo de arte reunidas.  </p>
+            <center><a href="https://instagram.com/luax_s?igshid=MzMyNGUyNmU2YQ=="><h5>Entre em contato</h5><img src="artistas/luana/insta.svg" alt="Instagram" id="insta"></a></center>
+            <center><a href="artistas.html" id="voltar">→ Voltar</a></center>
+        </div>
+        <div class="slider" id="main-slider">
+            <div class="slider-wrapper">
+                <img src="artistas/luana/luana1.svg" alt="First" class="slide">
+                <img src="artistas/luana/luana2.svg" alt="Second" class="slide">
+                <img src="artistas/luana/luana3.svg" alt="Third" class="slide">
+            </div>
+        </div>
+    </main>
+</body>
+<script>
+    (function () {
+
+        function Slideshow(element) {
+            this.el = document.querySelector(element);
+            this.init();
+        }
+
+        Slideshow.prototype = {
+            init: function () {
+                this.wrapper = this.el.querySelector(".slider-wrapper");
+                this.slides = this.el.querySelectorAll(".slide");
+                this.previous = this.el.querySelector(".slider-previous");
+                this.next = this.el.querySelector(".slider-next");
+                this.index = 0;
+                this.total = this.slides.length;
+                this.timer = null;
+                this.action();
+                this.stopStart();
+            },
+            _slideTo: function (slide) {
+                var currentSlide = this.slides[slide];
+                currentSlide.style.opacity = 1;
+
+                for (var i = 0; i < this.slides.length; i++) {
+                    var slide = this.slides[i];
+                    if (slide !== currentSlide) {
+                        slide.style.opacity = 0;
+                    }
+                }
+            },
+            action: function () {
+                var self = this;
+                self.timer = setInterval(function () {
+                    self.index++;
+                    if (self.index == self.slides.length) {
+                        self.index = 0;
+                    }
+                    self._slideTo(self.index);
+
+                }, 4000);
+            },
+            stopStart: function () {
+                var self = this;
+                self.el.addEventListener("mouseover", function () {
+                    clearInterval(self.timer);
+                    self.timer = null;
+
+                }, false);
+                self.el.addEventListener("mouseout", function () {
+                    self.action();
+
+                }, false);
+            }
+
+
+        };
+
+        document.addEventListener("DOMContentLoaded", function () {
+
+            var slider = new Slideshow("#main-slider");
+
+        });
+
+
+    })();
+
+</script>
+</html>

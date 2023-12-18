@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conheça nossos artistas - For Your Voice</title>
+    <link rel="stylesheet" href="artistas/artistas-style.css">
+</head>
+
+<body>
+    <header>
+        <img src="artistas/fyv-artistas.svg" alt="icon" id="icon">
+        <a href="index.html">página inicial</a>
+        <img src="artistas/estrelinha-artistas.svg" alt="estrelinha" class="estrelinha">
+        <a href="linhasdeajuda.html">linhas de ajuda</a>
+        <img src="artistas/estrelinha-artistas.svg" alt="estrelinha" class="estrelinha">
+        <a href="doacoes.html">doações</a>
+        <img src="artistas/estrelinha-artistas.svg" alt="estrelinha" class="estrelinha">
+        <a href="contatos.html">contatos</a>
+        <form action="login.html" method="post">
+            <input type="submit" id="Login_Index" name="Login_Index" value="Login" class="Login_Index">
+        </form>
+    </header>
+    <main>
+        <div id="texto">
+            <center> <img src="artistas/titulo.svg" alt="For Your Voice"></center>
+            <p style="width: 70%;">O projeto 'For Your Voice' veio da percepção da importância de destacar as vozes
+                daqueles talentos frequentemente ofuscados pela multidão. </p>
+            <div id="afastar">
+                <p>Em nossa fase inaugural, optamos por ressaltar artistas que personificam a essência da nossa
+                    comunidade. Cada um deles cria arte que, sem dúvida, merece aplauso e reconhecimento.</p>
+            </div>
+        </div>
+        <div class="slider" id="main-slider">
+            <div class="slider-wrapper">
+                <img src="artistas/img1.svg" alt="First" class="slide">
+                <img src="artistas/img2.svg" alt="Second" class="slide">
+                <img src="artistas/img3.svg" alt="Third" class="slide">
+                <img src="artistas/img4.svg" alt="Forth" class="slide">
+                <img src="artistas/img5.svg" alt="Fifth" class="slide">
+            </div>
+        </div>
+    </main>
+    <center><h3>Clique e conheça nossos artistas!</h3></center>
+    <center><div id="artistas">
+        <div class="fotos">
+            <a href="felipe.html"><img src="artistas/img1.svg" alt=""><p>Felipe Cardoso</p></a>           
+        </div>
+        <div class="fotos">
+            <a href="ella.html"><img src="artistas/img2.svg" alt=""><p>Ella Santos</p></a>
+        </div>
+        <div class="fotos">
+            <a href="akuma.html"><img src="artistas/img3.svg" alt=""><p>Akuma Vayon</p></a>
+        </div>
+        <div class="fotos">
+            <a href="luana.html"><img src="artistas/img4.svg" alt=""><p>Luana Pacheco</p></a>
+        </div>
+        <div class="fotos">
+            <a href="ayna.html"><img src="artistas/img5.svg" alt=""><p>Ayná</p></a>
+        </div></center>
+    </div>
+
+</body>
+<script>
+    (function () {
+
+        function Slideshow(element) {
+            this.el = document.querySelector(element);
+            this.init();
+        }
+
+        Slideshow.prototype = {
+            init: function () {
+                this.wrapper = this.el.querySelector(".slider-wrapper");
+                this.slides = this.el.querySelectorAll(".slide");
+                this.previous = this.el.querySelector(".slider-previous");
+                this.next = this.el.querySelector(".slider-next");
+                this.index = 0;
+                this.total = this.slides.length;
+                this.timer = null;
+                this.action();
+                this.stopStart();
+            },
+            _slideTo: function (slide) {
+                var currentSlide = this.slides[slide];
+                currentSlide.style.opacity = 1;
+
+                for (var i = 0; i < this.slides.length; i++) {
+                    var slide = this.slides[i];
+                    if (slide !== currentSlide) {
+                        slide.style.opacity = 0;
+                    }
+                }
+            },
+            action: function () {
+                var self = this;
+                self.timer = setInterval(function () {
+                    self.index++;
+                    if (self.index == self.slides.length) {
+                        self.index = 0;
+                    }
+                    self._slideTo(self.index);
+
+                }, 4000);
+            },
+            stopStart: function () {
+                var self = this;
+                self.el.addEventListener("mouseover", function () {
+                    clearInterval(self.timer);
+                    self.timer = null;
+
+                }, false);
+                self.el.addEventListener("mouseout", function () {
+                    self.action();
+
+                }, false);
+            }
+
+
+        };
+
+        document.addEventListener("DOMContentLoaded", function () {
+
+            var slider = new Slideshow("#main-slider");
+
+        });
+
+
+    })();
+
+</script>
+
+</html>

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Felipe Cardoso - For Your Voice</title>
+    <link rel="stylesheet" href="artistas/felipe/felipe.css">
+</head>
+
+<body>
+    <header>
+        <img src="artistas/felipe/fyv.svg" alt="icon" id="icon">
+        <a href="index.html">página inicial</a>
+        <img src="artistas/felipe/estrelinha.svg" alt="estrelinha" class="estrelinha">
+        <a href="linhasdeajuda.html">linhas de ajuda</a>
+        <img src="artistas/felipe/estrelinha.svg" alt="estrelinha" class="estrelinha">
+        <a href="doacoes.html">doações</a>
+        <img src="artistas/felipe/estrelinha.svg" alt="estrelinha" class="estrelinha">
+        <a href="contatos.html">contatos</a>
+        <form action="login.html" method="post">
+            <input type="submit" id="Login_Index" name="Login_Index" value="Login" class="Login_Index">
+        </form>
+    </header>
+    <main>
+        <div id="texto">
+            <center><img src="artistas/felipe/felipecardoso.svg" alt="Felipe Cardoso"></center>
+            <p>Felipe Cardoso dançarino e modelo, vem da <u>Ceilândia norte</u> e tem 20 anos e tem a arte como um vetor na sua vida, quase como se fosse um coração pulsante em seu peito.<br>
+                Teve seu primeiro contato com a dança numa escola pública do DF, durante 5 anos praticou em uma oficina e hoje em dia cursa licenciatura em dança no IFB. Seu ingresso na vida de modelo veio a partir de um concurso de beleza para pessoas periféricas do DF, Felipe ficou entre os finalistas e a partir daí seguiu no mundo da moda.</p>
+            <center><a href="https://instagram.com/fehlipps?igshid=MzMyNGUyNmU2YQ=="><h5>Entre em contato</h5><img src="artistas/felipe/insta.svg" alt="Instagram" id="insta"></a></center>
+            <center><a href="artistas.html" id="voltar">→ Voltar</a></center>
+        </div>
+        <div class="slider" id="main-slider">
+            <div class="slider-wrapper">
+                <img src="artistas/felipe/felipe1.svg" alt="First" class="slide">
+                <img src="artistas/felipe/felipe2.svg" alt="Second" class="slide">
+                <img src="artistas/felipe/felipe3.svg" alt="Third" class="slide">
+            </div>
+        </div>
+    </main>
+</body>
+<script>
+    (function () {
+
+        function Slideshow(element) {
+            this.el = document.querySelector(element);
+            this.init();
+        }
+
+        Slideshow.prototype = {
+            init: function () {
+                this.wrapper = this.el.querySelector(".slider-wrapper");
+                this.slides = this.el.querySelectorAll(".slide");
+                this.previous = this.el.querySelector(".slider-previous");
+                this.next = this.el.querySelector(".slider-next");
+                this.index = 0;
+                this.total = this.slides.length;
+                this.timer = null;
+                this.action();
+                this.stopStart();
+            },
+            _slideTo: function (slide) {
+                var currentSlide = this.slides[slide];
+                currentSlide.style.opacity = 1;
+
+                for (var i = 0; i < this.slides.length; i++) {
+                    var slide = this.slides[i];
+                    if (slide !== currentSlide) {
+                        slide.style.opacity = 0;
+                    }
+                }
+            },
+            action: function () {
+                var self = this;
+                self.timer = setInterval(function () {
+                    self.index++;
+                    if (self.index == self.slides.length) {
+                        self.index = 0;
+                    }
+                    self._slideTo(self.index);
+
+                }, 4000);
+            },
+            stopStart: function () {
+                var self = this;
+                self.el.addEventListener("mouseover", function () {
+                    clearInterval(self.timer);
+                    self.timer = null;
+
+                }, false);
+                self.el.addEventListener("mouseout", function () {
+                    self.action();
+
+                }, false);
+            }
+
+
+        };
+
+        document.addEventListener("DOMContentLoaded", function () {
+
+            var slider = new Slideshow("#main-slider");
+
+        });
+
+
+    })();
+
+</script>
+</html>

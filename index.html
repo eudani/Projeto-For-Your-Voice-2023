@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página inicial - For Your Voice</title>
+    <link rel="stylesheet" href="index/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,300;1,200&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <img src="index/fyvc.svg" alt="icon" id="icon">
+        <a href="index.html">página inicial</a>
+        <img src="index/estrela.svg" alt="estrelinha" class="estrelinha">
+        <a href="linhasdeajuda.html">linhas de ajuda</a>
+        <img src="index/estrela.svg" alt="estrelinha" class="estrelinha">
+        <a href="doacoes.html">doações</a>
+        <img src="index/estrela.svg" alt="estrelinha" class="estrelinha">
+        <a href="contatos.html">contatos</a>
+        <form action="login.html" method="post">
+            <input type="submit" id="Login_Index" name="Login_Index" value="Login" class="Login_Index">
+        </form>
+    </header>
+
+    <div id="body">
+        <div id="sobre">
+            <center><img src="index/Nosso Projeto.svg" alt="Nosso projeto" id="nosso-projeto">
+
+                <div class="image-slideshow" id="sobre-slide">
+                    <div class="image fade">
+                        <img src="index/texto-1.png"
+                            alt="A ideia do site For Your Voice surgiu por meio do trabalho de conclusão de curso oferecido pelo Instituto Farol na Quebrada(Gerando Falcões), o Senac DF e Serasa Experian.">
+                    </div>
+                    <div class="image fade">
+                        <img src="index/texto-2.png"
+                            alt="A proposta inicial era criar um site para colocar em prática todo o conteúdo abordado em sala de aula e testar nossa capacidade no mundo da programação.">
+                    </div>
+                    <div class="image fade">
+                        <img src="index/texto-3.png"
+                            alt="No decorrer do projeto, trabalhamos para transformar essa ideia em realidade. O For Your Voice se tornou mais do que apenas um projeto acadêmico; tornou-se uma plataforma que visa dar voz às comunidades e promovê-las socialmente.">
+                    </div>
+                    <div class="image fade">
+                        <img src="index/texto-4.png"
+                            alt=" Ao longo do processo de desenvolvimento, a equipe do For Your Voice se inspirou nas necessidades das comunidades locais e no desejo de oferecer recursos e informações úteis para aqueles que necessitam.">
+                    </div>
+                    <div class="image fade">
+                        <img src="index/texto-5.png"
+                            alt="Nosso site oferece uma variedade de recursos, desde a divulgação do trabalho de artistas de Brasília à informações sobre direitos básicos, oportunidades de emprego e serviços públicos disponíveis para os membros das comunidades diversas.">
+                    </div>
+                    <div class="image fade">
+                        <img src="index/texto-6.png"
+                            alt="Estamos orgulhosos do que alcançamos até agora, mas nossa jornada está longe de terminar. Continuamos a expandir e aprimorar o For Your Voice e buscamos possíveis parcerias adicionais para garantir que nossa plataforma seja um recurso valioso para todos.">
+                    </div>
+                </div>
+                <button id="prevBtn" onclick="plusSlides(-1)">❮ Voltar</button>
+                <button id="nextBtn" onclick="plusSlides(1)">Próximo ❯</button>
+            </center>
+        </div>
+
+        <div class="slider" id="main-slider">
+            <div class="slider-wrapper">
+                <img src="index/img1.png" alt="First" class="slide">
+                <img src="index/img2.png" alt="Second" class="slide">
+                <img src="index/img3.png" alt="Third" class="slide">
+                <img src="index/img4.jpg" alt="Forth" class="slide">
+                <img src="index/img5.png" alt="Fifth" class="slide">
+                <img src="index/img6.png" alt="Sixth" class="slide">
+                <img src="index/img7.png" alt="Seventh" class="slide">
+                <img src="index/img8.png" alt="Eighth" class="slide">
+                <img src="index/img9.png" alt="Nineth" class="slide">
+
+            </div>
+        </div>
+    </div>
+
+
+    <div id="marketplace">
+        <center><a href="artistas.html">SOBRE NOSSOS ARTISTAS</a></center>
+    </div>
+
+    <footer>
+        <table>
+            <tr>
+                <td><a href="brunno.html" class="footer">Brunno Dias</a></td>
+                <td><a href="danielly.html" class="footer">Danielly Lima</a></td>
+                <td><a href="david.html" class="footer">David Aires</a></td>
+                <td><a href="leticia.html" class="footer">Letícia Sena</a></td>
+                <td><a href="samara.html" class="footer">Samara de Souza</a></td>
+            </tr>
+            <tr>
+                <td><a href="linhasdeajuda.html" class="footer">Linhas de ajuda</a></td>
+                <td><a href="contatos.html" class="footer">Contatos</a></td>
+                <td><a href="artistas.html" class="footer">Talentos</a></td>
+                <td><a href="doacoes.html" class="footer">Doações</a></td>
+                <td><a href="index.html" class="footer">Página inicial</a></td>
+            </tr>
+        </table>
+    </footer>
+</body>
+<script>
+    let index = 0;
+    displayImages();
+    function displayImages() {
+        let i;
+        const images = document.getElementsByClassName("image");
+        for (i = 0; i < images.length; i++) {
+            images[i].style.display = "none";
+        }
+        index++;
+        if (index > images.length) {
+            index = 1;
+        }
+        images[index - 1].style.display = "block";
+        setTimeout(displayImages, 7500);
+    }
+
+    // Add these functions to your existing script
+
+    let slideIndex = 0;
+
+    function plusSlides(n) {
+        showSlides(slideIndex += n);
+    }
+
+    function currentSlide(n) {
+        showSlides(slideIndex = n);
+    }
+
+    function showSlides(n) {
+        let i;
+        const slides = document.getElementsByClassName("image");
+        if (n > slides.length) {
+            slideIndex = 1;
+        }
+        if (n < 1) {
+            slideIndex = slides.length;
+        }
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        slides[slideIndex - 1].style.display = "block";
+    }
+
+    // Call showSlides to initialize the first slide
+    showSlides(slideIndex);
+
+
+    (function () {
+
+        function Slideshow(element) {
+            this.el = document.querySelector(element);
+            this.init();
+        }
+
+        Slideshow.prototype = {
+            init: function () {
+                this.wrapper = this.el.querySelector(".slider-wrapper");
+                this.slides = this.el.querySelectorAll(".slide");
+                this.previous = this.el.querySelector(".slider-previous");
+                this.next = this.el.querySelector(".slider-next");
+                this.index = 0;
+                this.total = this.slides.length;
+                this.timer = null;
+                this.action();
+                this.stopStart();
+            },
+            _slideTo: function (slide) {
+                var currentSlide = this.slides[slide];
+                currentSlide.style.opacity = 1;
+
+                for (var i = 0; i < this.slides.length; i++) {
+                    var slide = this.slides[i];
+                    if (slide !== currentSlide) {
+                        slide.style.opacity = 0;
+                    }
+                }
+            },
+            action: function () {
+                var self = this;
+                self.timer = setInterval(function () {
+                    self.index++;
+                    if (self.index == self.slides.length) {
+                        self.index = 0;
+                    }
+                    self._slideTo(self.index);
+
+                }, 4000);
+            },
+            stopStart: function () {
+                var self = this;
+                self.el.addEventListener("mouseover", function () {
+                    clearInterval(self.timer);
+                    self.timer = null;
+
+                }, false);
+                self.el.addEventListener("mouseout", function () {
+                    self.action();
+
+                }, false);
+            }
+
+
+        };
+
+        document.addEventListener("DOMContentLoaded", function () {
+
+            var slider = new Slideshow("#main-slider");
+
+        });
+
+
+    })();
+
+</script>
+
+</html>
