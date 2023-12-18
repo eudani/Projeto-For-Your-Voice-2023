@@ -1,0 +1,229 @@
+*{
+    margin: 0;
+}
+
+body {
+    font-family: 'Nunito', sans-serif;
+    background:url(top-left.svg) top left no-repeat, url(top-right.svg) top right no-repeat, url(bottom-left.svg) bottom left no-repeat, url(bottom-right.svg) bottom right no-repeat;
+    height: 120vh;
+    width: 100vw;
+}
+
+header {
+    margin-top: 0%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin: 10px;
+}
+
+#icon {
+ height:100px;
+}
+
+.estrelinha{
+    height: 40px;
+    margin-top: 20px;
+}
+
+header a {
+    text-transform: uppercase;
+    text-decoration: none;
+    background: linear-gradient(180deg, #E40303 0%, #FF8C00 22.4%, #FFED00 39.06%, #007F26 57.81%, #004DFF 79.17%, #750787 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: bold;
+    margin: 15px;
+    font-size: 20pt;
+    margin-top: 27px;
+}
+
+header a:hover {
+    text-shadow: 0 0 3px rgba(0, 0, 0, 0.253), 0 0 5px #ffffff;
+}
+
+
+#icon {
+ height:100px;
+}
+
+.estrelinha{
+    height: 40px;
+    margin-top: 20px;
+}
+
+#bandeirinha {
+    height: 50px;
+    margin-top: 25px;
+}
+
+
+footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    text-align: center;
+    bottom: 0;
+    width: 100%;
+    /* margin-bottom: 10px; */
+    /* margin-top: 95vh; */
+    /* position:fixed; */
+}
+
+footer a {
+    text-transform: uppercase;
+    text-decoration: none;
+    background: linear-gradient(180deg, #E40303 0%, #FF8C00 22.4%, #FFED00 39.06%, #007F26 57.81%, #004DFF 79.17%, #750787 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: bold;
+    margin: 15px;
+    font-size: 20pt;
+}
+
+
+.footer {
+    font-size: 15pt;
+    margin: 0%;
+    margin: 15px;
+    text-decoration: none;
+}
+
+/* AQUI COMEÇA A PARTE DE STYLE DA PÁGINA DE CONTATOS */
+
+
+#aequipe{
+    margin-left: 200px;
+    margin-top: 150px;
+    width: 50%;
+    height: 114px;
+}
+
+#conhecaaequipe {
+    margin-left: 150px;
+    margin-top: 35px;
+    width: 30%;
+}
+
+main#fotos{
+    display: grid;
+    grid-template-columns: 300px 250px;
+    gap: 10px;
+    justify-content:flex-start;
+    margin-top:auto;
+    width: 90px;
+
+}
+main#samara{
+    grid-template-columns: 250px 250px;
+    gap: 5px;
+    margin-left: 130px;
+    margin-top: -50px;
+
+}
+/* h1{
+    margin-left: 600px;
+    font-family: kenao;
+
+} */
+
+
+#body {
+    margin-top:-185px;
+}
+
+@media (max-width:1920px) {
+    body {
+        width: 1920px;
+        height: 1080px;
+    }
+}
+
+.fotos {
+ width: 300px;
+}
+
+/* agradecimentos!!! */
+
+#agradecimento {
+    width: 50%;
+    float: right;
+    margin-right: 50px;
+}
+
+#agradecimento p {
+    text-align: justify;
+    font-size: 25px;
+    margin-right: 150px;
+    margin-left: 150px;
+    margin-top: 25px;
+    line-height: 45px;
+}
+
+#agradecimento #titulo-agrad {
+    width: 450px;
+}
+
+#agradecimento #assinatura {
+    width: 300px;
+    margin-top: 25px;
+}
+
+
+/* #agradecimento span {
+    background: linear-gradient(180deg, #E40303 0%, #FF8C00 22.4%, #FFED00 39.06%, #007F26 57.81%, #004DFF 79.17%, #750787 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: bold;
+    font-size: 30px;
+    margin-top: 10px;
+} */
+
+
+
+
+
+/*#brunno{
+    width: 275px;
+    height: 260px;
+    flex-shrink: 0;
+    margin-top: 5px;
+    margin-left: 50px;
+
+}
+
+#danielly{
+width: 330px;
+height: 304px;
+flex-shrink: 0;
+left: 5px;
+}
+
+#david{
+
+    width: 284px;
+    height: 269.374px;
+    flex-shrink: 100;
+    padding-left: 300px;
+    padding-right: 300px;
+
+
+
+}
+#leticia{
+    width: 309px;
+    height: 303px;
+    margin-left: 265px;
+    padding-left: 150px;
+    padding-right: 150px;
+}
+
+#samara{
+    width: 280px;
+    height: 280px;
+    flex-shrink: 0;
+    margin-left: 20px;
+}*/

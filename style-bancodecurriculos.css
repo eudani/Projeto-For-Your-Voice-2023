@@ -1,0 +1,216 @@
+@font-face {
+    font-family: 'Kenao';
+    src: url(Kenao.otf);
+  }
+
+#Login_BC {
+    text-transform: capitalize;
+    border: 2px solid black;
+    background-color: white;
+    color: black;
+    padding: 20px 30px;
+    font-size: 20px;
+    border-radius: 30px;
+    cursor: pointer;
+    margin-bottom: 25%;
+    margin-top: 10%;
+    text-align: center;
+    float: right;
+    border-color: #E40303;
+    color:  #FF8C00;
+    margin-left: 10px;
+    font-family: 'Nunito', sans-serif;
+  }
+  
+  #Login_BC:hover {
+    background: #E40303;
+    background: radial-gradient(circle, #E40303 0%, #FF8C00 53%, rgba(255, 237, 0, 0.58) 100%);
+    color: white;
+  
+  }
+
+
+* {
+    box-sizing: inherit;
+}
+
+
+html {
+    box-sizing: border-box;
+    font-size: var(--htmlFontSize);
+}
+
+body {
+    font-family: 'Nunito', sans-serif;
+    background: url(bottom-left.svg) no-repeat bottom left, url(up-middle.svg) no-repeat top, url(bottom-right.svg) no-repeat bottom right;
+}
+
+
+header {
+    margin-top: 0%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin: 10px;
+}
+
+#icon {
+    height: 5.25em;
+}
+
+.estrelinha {
+    height: 2.5em;
+    margin-top: 1.25rem;
+}
+
+header a {
+    text-transform: uppercase;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 20pt;
+    margin-top: 1.2em;
+    background: linear-gradient(180deg, #E40303 9.9%, #FF8C00 29.36%, rgba(255, 237, 0, 0.58) 45.23%, #008026 53.87%, #004DFF 67.87%, #750787 81.88%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+header a:hover {
+    text-shadow: 0 0 3px rgba(0, 0, 0, 0.253), 0 0 5px #ffffff;
+}
+
+#cadastroLogin {
+    text-align: center;
+    margin-right: 1em;
+}
+
+#body {
+    display: flex;
+    align-items: center;
+}
+
+main {
+    display: flex;
+}
+
+#textinho {
+    width: 40%;
+    margin: 10em;
+}
+
+#textinho h1 {
+    font-family: "Kenao";
+    background: linear-gradient(180deg, #E40303 9.9%, #FF8C00 29.36%, rgba(255, 237, 0, 0.58) 45.23%, #008026 53.87%, #004DFF 67.87%, #750787 81.88%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 3em;
+    margin-top: 2em;
+}
+
+#textinho p {
+    margin: 50px;
+    line-height: 30px;
+}
+
+.icon {
+    block-size: 1em;
+    display: inline-block;
+    inline-size: 1em;
+    vertical-align: middle;
+}
+
+#formulario {
+    width: 40%;
+    border-radius: 50px;
+    background: linear-gradient(white, white) padding-box,
+        linear-gradient(180deg, #E40303 9.9%, #FF8C00 29.36%, rgba(255, 237, 0, 0.58) 45.23%, #008026 53.87%, #004DFF 67.87%, #750787 81.88%) border-box;
+    border-radius: 50px;
+    border: 2px solid transparent;
+    margin-right: 5em;
+    height: 90%;
+    padding: 20px;
+    margin-top: 10em;
+}
+
+#formulario input {
+    border: none;
+    border-bottom: 1px solid black;
+}
+
+#formulario #foto {
+    border: none;
+    cursor: pointer;
+}
+
+#formulario .titulos {
+    font-weight: bold;
+    font-size: 1.5em;
+}
+
+#formulario .titulos span {
+    font-weight: lighter;
+    font-size: 0.5em;
+}
+
+#formulario button {
+    border-radius: 50px;
+    border: 1px solid #E40303;
+    padding-left: 3em;
+    padding-right: 3em;
+    margin-top: 3em;
+    background: none;
+    cursor: pointer;
+}
+
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+    -moz-appearance: textfield;
+}
+
+.effect {
+    text-align: center;
+    display: inline-block;
+    position: relative;
+    text-decoration: none;
+    text-transform: capitalize;
+    overflow: hidden;
+}
+
+.effect.effect-5 {
+    transition: all 0.2s linear 0s;
+
+    &:before {
+        content: "→";
+        font-family: FontAwesome;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        top: 0;
+        left: 0px;
+        height: 100%;
+        width: 30px;
+        background-color: rgba($overlay-color, 0.3);
+        border-radius: 0 50% 50% 0;
+        transform: scale(0, 1);
+        transform-origin: left center;
+        transition: all 0.2s linear 0s;
+    }
+
+    &:hover {
+        text-indent: 30px;
+
+        &:before {
+            transform: scale(1, 1);
+            text-indent: 0;
+        }
+    }
+}
